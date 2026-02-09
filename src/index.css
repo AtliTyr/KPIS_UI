@@ -1,0 +1,174 @@
+  /* Подключение шрифта Montserrat */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  @import "tailwindcss";
+  @plugin "tailwindcss-animate";
+
+  @custom-variant dark (&:is(.dark *));
+
+
+  /* Подключаем внешние палитры */
+  @import './themes/light.css';
+  @import './themes/dark.css';
+
+  /* Шрифты для проекта */
+
+  /* Заголовки */
+  .bigHeading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 28px;
+  }
+
+  .heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 20px;
+  }
+
+  /* Акцентный текст (Bold) */
+  .accent-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  /* Акцентный текст (SemiBold) */
+  .accent-semibold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Текст элементов (Medium) */
+  .element-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  /* Стандартный текст (Regular) */
+  .standard-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .plain-text {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Радиусы для компонентов */
+  :root {
+    --radius: 0.625rem;
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+  }
+
+  /* Маппинг Tailwind-переменных на палитру из light.css / dark.css */
+  :root, :root[data-theme='light'], :root[data-theme='dark'] {
+    --color-background: var(--color-bg);
+    --color-foreground: var(--color-font);
+    --color-card: var(--color-some-els);
+    --color-card-foreground: var(--color-font);
+    --color-popover: var(--color-bg-main-el, var(--color-bg));
+    --color-popover-foreground: var(--color-font);
+    --color-primary: var(--color-links);
+    --color-primary-foreground: #ffffff;
+    --color-secondary: var(--color-some-els);
+    --color-secondary-foreground: var(--color-font);
+    --color-muted: var(--color-inconspicuous-font);
+    --color-muted-foreground: var(--color-font);
+    --color-accent: var(--color-accent-blue-bg);
+    --color-accent-foreground: var(--color-accent-blue-text);
+    --color-destructive: var(--color-accent-red-bg);
+    --color-destructive-foreground: var(--color-accent-red-text);
+    --color-border: var(--color-outline);
+    --color-input: var(--color-outline);
+    --color-ring: var(--color-links);
+
+    --color-chart-1: var(--color-accent-purple-bg);
+    --color-chart-2: var(--color-accent-green-bg);
+    --color-chart-3: var(--color-accent-yellow-bg);
+    --color-chart-4: var(--color-accent-blue-bg);
+    --color-chart-5: var(--color-accent-red-bg);
+
+    --color-sidebar: var(--color-bg);
+    --color-sidebar-foreground: var(--color-font);
+    --color-sidebar-primary: var(--color-links);
+    --color-sidebar-primary-foreground: #fff;
+    --color-sidebar-accent: var(--color-some-els);
+    --color-sidebar-accent-foreground: var(--color-font);
+    --color-sidebar-border: var(--color-outline);
+    --color-sidebar-ring: var(--color-links);
+
+    --color-hover: var(--color-link-hover);
+
+    /* --scrollbar-thumb: var(--color-bg); */
+    /* --scrollbar-thumb: var(--color-some-icons); */
+    /* --scrollbar-thumb: rgba(120, 120, 120, 0.4); */
+    /* --scrollbar-thumb-hover: rgba(120, 120, 120, 0.6); */
+    /* --scrollbar-thumb-hover: var(--color-bg); */
+  }
+
+  /* Шляпа с помощью которой модифицируется placeholder у select компонента. Возможно в будущем аукнется и придётся думать
+    catch-all: элемент, у которого Radix выставляет data-placeholder */
+  [data-placeholder] {
+    color: var(--color-inconspicuous-font) !important;
+    font-weight: 400;
+  }
+
+  /* Tailwind base */
+  @layer base {
+    * {
+      border-color: var(--color-border);
+      outline-color: var(--color-ring);
+    }
+    body {
+      /* background-color: var(--color-font); */
+      background: linear-gradient( 
+        180deg,
+        var(--color-bg-gradient) 0%,
+        var(--color-bg-gradient) 5%,
+        var(--color-bg) 55%,
+        var(--color-bg) 100%
+      );
+      color: var(--color-foreground);
+    }
+    .sidebar {
+      background-color: var(--color-bg);
+      color: var(--color-foreground);
+    }
+    .sidebarTitle {
+      color: var(--color-accent-blue-bg);
+    }
+    .defaultAvatar {
+      justify-self: center;
+      background-color: var(--color-bg-els-inside-main-el);
+    }
+    .sidebarUserName {
+      color: var(--color-font);
+    }
+
+    .sidebarLocationCircle {
+      color: var(--color-accent-blue-bg);
+      fill: var(--color-accent-blue-bg);
+    }
+    .sidebarActiveMenuItem {
+      color: var(--color-accent-blue-bg);
+    }
+    .sidebarNonActiveMenuItem {
+      color: var(--color-font);
+    }
+    .sidebarSwitchDark {
+      background-color: var(--color-accent-blue-bg);
+    }
+    .sidebarSwitchLight {
+      background-color: var(--color-some-els);
+    }
+    .sidebarSwitch :hover {
+      cursor: pointer;
+    }
+  }

@@ -1,0 +1,35 @@
+:root[data-theme='dark'] {
+  /* Background */
+  --color-bg: #3A3A3A;
+  --color-bg-main-el: #2E2E2E;
+  --color-bg-els-inside-main-el: #252525;
+  --color-bg-gradient: #3D4695;
+
+  /* Secondary */
+  --color-font: #F0F0F0;
+  --color-some-els: #363636;
+  --color-outline: #434343;
+  --color-inconspicuous-font: #757575;
+  --color-some-icons: #C9C9C9;
+  --color-links: #90B3E3;
+  --color-bg-separator: #333339;
+  --color-link-hover: #7895BF;
+
+  /* Accents */
+  --color-accent-red-text: #ED5F6C;
+  --color-accent-red-bg: rgba(250, 183, 189, 0.75);
+  --color-accent-yellow-text: #EF9E44;
+  --color-accent-yellow-bg: rgba(250, 216, 168, 0.7);
+  --color-accent-green-text: #3CD288;
+  --color-accent-green-bg: rgba(161, 252, 204, 0.75);
+  --color-accent-purple-text: #A85FEC;
+  --color-accent-purple-bg: rgba(220, 183, 255, 0.7);
+  --color-accent-blue-text: #5F6DEC;
+  --color-accent-blue-bg: rgba(178, 186, 249, 1);
+
+  --color-button-red-hover: #D17A82;
+  --color-button-yellow-hover: #D4A269;
+  --color-button-green-hover: #67C794;
+  --color-button-purple-hover: #A97BD4;
+  --color-button-blue-hover: #6A76D2;
+}

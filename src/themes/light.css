@@ -1,0 +1,35 @@
+:root[data-theme='light'] {
+  /* Background */
+  --color-bg: #F9F9F9;
+  --color-bg-main-el: #ffffff;
+  --color-bg-els-inside-main-el: #D9D9D9;
+  --color-bg-gradient: #5F6DEC;
+
+  /* Secondary */
+  --color-font: #272727;
+  --color-some-els: #EDEDED;
+  --color-outline: #DBDBDB;
+  --color-inconspicuous-font: #A3A3A3;
+  --color-some-icons: #525252;
+  --color-links: #6D86E4;
+  --color-bg-separator: #EDEDF9;
+  --color-link-hover: #5B73BF;
+
+  /* Accents */
+  --color-accent-red-bg: rgba(236, 95, 107, 0.9);
+  --color-accent-red-text: #8F454B;
+  --color-accent-yellow-bg: rgba(238, 158, 68, 0.85);
+  --color-accent-yellow-text: #815B32;
+  --color-accent-green-bg: rgba(60, 210, 136, 0.9);
+  --color-accent-green-text: #106C3F;
+  --color-accent-purple-bg: rgba(168, 95, 236, 0.85);
+  --color-accent-purple-text: #5C3381;
+  --color-accent-blue-bg: rgba(95, 109, 236, 0.9);
+  --color-accent-blue-text: #3D4695;
+
+  --color-button-red-hover: #BC3844;
+  --color-button-yellow-hover: #B47937;
+  --color-button-green-hover: #30A46A;
+  --color-button-purple-hover: #803EBE;
+  --color-button-blue-hover: #3242CD;
+}
